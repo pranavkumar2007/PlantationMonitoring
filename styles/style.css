@@ -1,0 +1,219 @@
+/* 🌿 Global Style for Streamlit Plantation Monitoring */
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ===== Global Reset ===== */
+* {
+    font-family: 'Inter', sans-serif !important;
+}
+
+/* ===== App Background ===== */
+body, .main {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+    color: #fff !important;
+}
+
+/* ===== Headings ===== */
+h1 {
+    color: #ffffff !important;
+    font-weight: 700;
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+    animation: fadeInDown 0.8s ease-out;
+    margin-bottom: 1rem !important;
+}
+
+h2, h3, h4, h5, p, li {
+    color: #fff !important;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+/* ===== Cards ===== */
+.stApp > div > div {
+    background: #1a1a1a !important;
+    border-radius: clamp(12px, 2vw, 20px) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+    animation: fadeIn 1s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card {
+    background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
+    border-left: 4px solid #ffffff;
+    border-radius: 12px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    margin: 1rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    animation: slideInLeft 0.8s ease-out;
+    color: #e0e0e0;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== File Uploader ===== */
+.stFileUploader {
+    border: 2px dashed #666;
+    border-radius: 15px;
+    padding: clamp(1rem, 3vw, 2rem);
+    background: linear-gradient(135deg, #1a1a1a 0%, #222 100%);
+}
+
+/* ===== Buttons ===== */
+.stButton > button {
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    color: #00ffff;
+    border: 1px solid #00ffff;
+    border-radius: 12px;
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: 600;
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    width: 100%;
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #00ffff 0%, #00ffaa 100%);
+    color: #000 !important;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ===== Metric Card ===== */
+.metric-card {
+    background: linear-gradient(135deg, #222 0%, #2a2a2a 100%);
+    border-radius: 12px;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+/* ===== Radio Buttons ===== */
+.stRadio > div {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stRadio > div > label {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.stRadio > div > label:hover {
+    background: linear-gradient(135deg, #00ffff 0%, #00ffaa 100%);
+    color: #000 !important;
+}
+
+.stRadio > div > label[data-checked="true"] {
+    background: linear-gradient(135deg, #00ffff 0%, #00ffaa 100%);
+    color: #000 !important;
+}
+
+/* ===== Images ===== */
+.stImage {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== Spinner ===== */
+.stSpinner > div {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+}
+
+/* ===== Alerts ===== */
+.stSuccess, .stWarning, .stInfo {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    padding: clamp(0.75rem, 1.5vw, 1rem);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .stApp > div > div {
+        padding: 1rem !important;
+        border-radius: 12px !important;
+    }
+    .info-card {
+        padding: 1rem;
+        border-radius: 8px;
+    }
+    .stButton > button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem !important;
+    }
+    .stRadio > div {
+        flex-direction: column;
+    }
+    .stRadio > div > label {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .stApp > div > div {
+        padding: 1.5rem !important;
+    }
+    .info-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .stApp > div > div {
+        max-width: 1800px;
+        margin: 0 auto;
+    }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ===== FIX SIDEBAR TOGGLE BUTTON ===== */
+button[kind="header"], button[kind="icon"] svg,
+[data-testid="collapsedControl"] svg {
+    color: inherit !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+}
+
+/* Prevent icon scaling or weird font effects */
+[data-testid="collapsedControl"] * {
+    font-family: inherit !important;
+    color: inherit !important;
+}
+
+/* Reset default Streamlit header/deploy buttons */
+header [data-testid="stToolbar"] * {
+    all: unset;
+    display: revert;
+}

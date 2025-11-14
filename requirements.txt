@@ -1,0 +1,10 @@
+streamlit
+opencv-python
+matplotlib
+Pillow
+streamlit-image-coordinates
+numpy
+torch
+torchvision
+torchaudio
+segment_anything
