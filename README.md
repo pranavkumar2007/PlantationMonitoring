@@ -1,4 +1,4 @@
-🌱 Plantation Monitoring using SAM Segmentation and Resnet50
+**🌱 Plantation Monitoring using SAM Segmentation and Resnet50**
 This project implements a practical pipeline for plantation monitoring using the Segment Anything Model (SAM) for instance/semantic segmentation and a ResNet50 classifier for identifying segmented regions. The SAM model was uploaded and fine-tuned on domain-specific field imagery to produce accurate crop and field-category segments. A ResNet50 model was uploaded and subsequently fine-tuned on labeled segments to classify crop types and distinguish fallow/other land categories. A lightweight local web interface was developed to enable interactive upload of field images and visualization of segmentation and classification outputs. Results (segmentation masks, class labels, and summary tables) are presented with figures and numeric metrics in the Results section.
 
 Monitoring plantations and crop cover at field level is crucial for agricultural planning, early detection of crop stress, and estimation of cultivated area. Recent progress in foundation segmentation models (e.g., SAM) and convolutional neural network classifiers (e.g., ResNet architectures) enables accurate, automated extraction of crop regions and their subsequent classification from field imagery. This project integrates these components into an end-to-end pipeline suitable for small-scale deployment and interactive use.
@@ -32,4 +32,4 @@ User Authentication: Secure login and signup system
 
 Real-time Processing: Upload and analyze plantation images instantly
 
-Note: The first time you run the application, SAM model loading may take 20-60 seconds. Subsequent runs will be faster as the model is cached in session state.
+Note: The first time you run the application, SAM model loading may take 20-60 seconds. Subsequent runs will be faster as the model is cached in session state.ote: The first time you run the application, SAM model loading may take 20-60 seconds. Subsequent runs will be faster as the model is cached in session state.
